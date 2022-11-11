@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Password Generator App</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="container">
+        <div class="container-header">
+            <h1>Generate a <span class="container-header-title">random password</span> </h1>
+            <h2 class="container-header-subtitle">Never use an insecure password again</h2>
+            <h3 class="container-settings">Settings</3>
+                <div class="slide-container">
+                    <div class="slide-container-1">
+                        <p>Numbers</p>
+                        <input type="range" min="0" max="20" value="0" class="slider" id="range_numbers">
+                        <p id="slide-value-num"></p>
+                    </div>
+                    <div class="slide-container-2">
+                        <p>Letters</p>
+                        <input type="range" min="0" max="20" value="0" class="slider" id="range_letters">
+                        <p id="slide-value-letters"></p>
+                    </div>
+                    <div class="slide-container-3">
+                        <p>Symbols</p>
+                        <input type="range" min="0" max="20" value="0" class="slider" id="range_symbols">
+                        <p id="slide-value-symbols"></p>
+                    </div>
+                </div>
+
+                <button id="btn-generate" class="btn">Generate password</button>
+                <div class="container-result">
+                    <div id="pwd-display-1" class="result-pwd-1"></div>
+                    <i id="icon-copy-pwd1" class="fa-regular fa-copy fa-xl"></i>
+                    <div id="pwd-display-2" class="result-pwd-2"></div>
+                    <i id="icon-copy-pwd2" class="fa-regular fa-copy fa-xl"></i>
+                </div>
+                <button id="btn-clear" class="btn-clear">Clear</button>
+        </div>
+    </div>
+    <footer>
+        <p class="footer-fineprint">&copy; <span id="year"> </span> | Made with <span aria-label="love"
+                role="image">&#128150;</span> by
+            Hugonin</p>
+    </footer>
+
+
+
+
     <!-- Script -->
     <script src="script.js"></script>
 </body>
+
 </html>
